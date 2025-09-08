@@ -1,0 +1,123 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 170px;
+    /* background-color: green; */
+}
+
+.navbar img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+}
+
+.nav-connect {
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    font-size: 22px;
+    border: 2px solid #161513;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-connect:hover {
+    transform: scale(1.05);
+    border-color: #fff;
+}
+
+.anchor {
+    text-decoration: none;
+    color: #fff;
+}
+
+.anchor:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.anchor-btn {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-mob-close {
+    display: none;
+}
+
+.nav-mob-open {
+    display: none;
+}
+
+@media(max-width:768px) {
+    .navbar {
+        margin: 20px 50px;
+    }
+
+    .nav-connect {
+        display: none;
+    }
+
+    .nav-mob-open {
+        display: block;
+        position: fixed;
+        right: 30px;
+        font-size: 40px;
+    }
+
+    .nav-mob-close {
+        display: block;
+        position: relative;
+        top: 30px;
+        left: 290px;
+        width: 30px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        gap: 30px;
+        background-color: #1f0016;
+        width: 350px;
+        height: 100%;
+        z-index: 2;
+        transition: rigth 0.5s;
+        right: -350px;
+    }
+
+    .nav-menu li {
+        font-size: 30px;
+        padding-left: 100px;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+@media(max-width:1270px) {
+    .nav-connect {
+        display: none;
+    }
+}
+
+@media(max-width:1030px) {
+    .navbar {
+        margin: 20px 130px;
+    }
+}
+
+@media(max-width:960px) {
+    .navbar {
+        margin: 20px 43px;
+    }
+}
