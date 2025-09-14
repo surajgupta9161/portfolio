@@ -1,0 +1,131 @@
+:root {
+    --card-w: 340px;
+    --card-h: 220px;
+    --light-x: 50%;
+    --light-y: 50%;
+    --light-opacity: 0;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+/* ✅ Container ke andar cards center honge */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.scene {
+    perspective: 1000px;
+}
+
+.card {
+    width: var(--card-w);
+    max-width: 92vw;
+    /* responsive width */
+    height: var(--card-h);
+    max-height: 60vh;
+    background: #111;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+    transition: transform 200ms ease, border 200ms ease;
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    border: 2px solid #007bff;
+    /* Blue border on hover */
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--light-x) var(--light-y),
+            rgba(0, 123, 255, var(--light-opacity)),
+            rgba(0, 123, 255, 0.05) 120px,
+            rgba(0, 0, 0, 0) 220px);
+    mix-blend-mode: screen;
+    border-radius: inherit;
+    z-index: 2;
+    transition: background 40ms linear;
+}
+
+.card-inner {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #fff;
+}
+
+.desc {
+    font-size: 13px;
+    color: #aaa;
+    margin: 0 0 14px;
+}
+
+.meta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.chip {
+    background: #222;
+    color: #ddd;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+.getcode {
+    text-decoration: none;
+    color: white;
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+    :root {
+        --card-w: 92vw;
+        --card-h: auto;
+        /* height content ke hisaab se */
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .desc {
+        font-size: 12px;
+    }
+}
+
+/* 📲 Tablet */
+@media (max-width: 768px) {
+    :root {
+        --card-w: 80vw;
+        --card-h: auto;
+    }
+}

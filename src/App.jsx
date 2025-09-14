@@ -3,7 +3,9 @@ import Contact from "./Components/Contact/Contact"
 import Footer from "./Components/Footer/Footer"
 import Hero from "./Components/Hero/Hero"
 import Navbar from "./Components/Navbar/Navbar"
-import Projects from "./Components/Projects/Projects"
+import Card from "./Components/Projects/Card"
+// import Projects from "./Components/Projects/Projects"
+
 
 function App() {
 
@@ -12,7 +14,8 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Projects />
+      {/* <Projects /> */}
+      <Card />
       <Contact />
       <Footer />
     </>

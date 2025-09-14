@@ -129,7 +129,7 @@
 @media(max-width:768px) {
     .about {
         gap: 10px;
-        margin: 50px 70px;
+        margin: 50px 30px;
         align-items: start;
     }
 
@@ -150,6 +150,8 @@
 
     .about-skill p {
         font-size: 20px;
+        min-width: auto;
+
     }
 
     .about-skill hr {
@@ -174,4 +176,5 @@
         text-align: center;
         font-size: 16px;
     }
+
 }
