@@ -14,8 +14,8 @@ const Data = [
     },
     {
         title: "Spotify Clone",
-        description: "A todo list app to manage daily tasks with CRUD operations.",
-        technologies: ["JavaScript", "React", "HTML", "CSS"]
+        description:"A Spotify Clone UI designed to replicate the look and feel of Spotify. This project focuses only on frontend design, layout, and responsiveness. Music playback and internal functions are not included — it’s purely a visual clone to showcase clean UI and component-based development.",
+        technologies: ["HTML", "CSS"]
     },
     {
         title: "Portfolio Website",
