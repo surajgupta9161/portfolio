@@ -43,6 +43,9 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            <div id='projects' className='projects'>
+                <h1>Projects</h1>
+            </div>
         </div>
     )
 }
