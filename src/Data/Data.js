@@ -14,11 +14,7 @@ const Data = [
     },
     {
         title: "Spotify Clone",
-<<<<<<< HEAD
         description: "Designed a responsive Spotify-inspired music player interface using HTML and CSS. Replicated core UI components such as the sidebar, player controls, playlists, and navigation layout. Focused on clean design, responsiveness, and pixel-perfect styling.",
-=======
-        description:"A Spotify Clone UI designed to replicate the look and feel of Spotify. This project focuses only on frontend design, layout, and responsiveness. Music playback and internal functions are not included — it’s purely a visual clone to showcase clean UI and component-based development.",
->>>>>>> 57119e87daacc7ea25a7d2d44f7db60932f022a4
         technologies: ["HTML", "CSS"]
     },
     {
