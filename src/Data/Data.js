@@ -14,18 +14,19 @@ const Data = [
     },
     {
         title: "Spotify Clone",
-        description: "A todo list app to manage daily tasks with CRUD operations.",
-        technologies: ["JavaScript", "React", "HTML", "CSS"]
+        description: "Designed a responsive Spotify-inspired music player interface using HTML and CSS. Replicated core UI components such as the sidebar, player controls, playlists, and navigation layout. Focused on clean design, responsiveness, and pixel-perfect styling.",
+        technologies: ["HTML", "CSS"]
     },
     {
         title: "Portfolio Website",
-        description: "A personal portfolio website showcasing projects and skills.",
+        description: "Developed a modern and responsive portfolio website using HTML, CSS, JavaScript, and React. Showcased projects, technical skills, and contact information using reusable React components and clean UI design. Focused on performance, responsiveness, and maintainable code structure.",
         technologies: ["HTML", "CSS", "JavaScript", "React"]
     },
     {
-        title: "E-commerce Store",
-        description: "A small online store with shopping cart functionality. Now It is Pending coming soon...",
-        technologies: ["React", "Node.js", "Express", "MongoDB"]
+        title: "Wanderlust",
+        description: "Built a full-stack room/hotel listing platform using Node.js, Express, MongoDB, EJS, and Bootstrap. Implemented secure authentication with Passport.js, REST APIs for listings and reviews, and a responsive UI. Booking and payment integration in progress.",
+        technologies: ["Node.js", "Express", "MongoDB", "Bootstrap", "EJS"],
+        link: "https://github.com/surajgupta9161/WanderLust"
     }
 ];
 

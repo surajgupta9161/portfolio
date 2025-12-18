@@ -23,7 +23,16 @@ const Navbar = () => {
                 <li> <AnchorLink className='anchor' href='#hero'><p>Home</p></AnchorLink></li>
                 <li> <AnchorLink className='anchor' href='#about'><p>About me</p></AnchorLink> </li>
                 <li> <AnchorLink className='anchor' href='#projects'><p>Projects</p></AnchorLink> </li>
-                <li> <AnchorLink className='anchor' href='/'><p>Latest Project</p></AnchorLink> </li>
+                <li>
+                    <a
+                        className='anchor'
+                        href='https://github.com/surajgupta9161/WanderLust'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <p>Latest Project</p>
+                    </a>
+                </li>
                 <li> <AnchorLink className='anchor' href='#contact'><p>Contact</p></AnchorLink> </li>
             </ul>
             <div className="nav-connect"> <AnchorLink className='anchor-btn' href='#contact'>Connect with me</AnchorLink></div>
