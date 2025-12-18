@@ -33,12 +33,12 @@ const About = () => {
                     </div>
                     <hr />
                     <div className="achivement">
-                        <h1>05+</h1>
+                        <h1>02+</h1>
                         <p>PROJECTS PENDING</p>
                     </div>
                     <hr />
                     <div className="achivement">
-                        <h1>10+</h1>
+                        <h1>03+</h1>
                         <p>PROJECTS IDEAS!</p>
                     </div>
                 </div>
