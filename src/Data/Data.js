@@ -1,9 +1,15 @@
 const Data = [
     {
-        title: "Weather App",
-        description: "A responsive Weather App built with React and Material- UI that fetches real - time weather data from WeatherAPI.Users can search for any city, view temperature, humidity and wind details, and local time, with proper error handling for invalid inputs.",
-        technologies: ["JavaScript", "HTML", "CSS", "React"],
-        link: "https://github.com/surajgupta9161/weatherApp"
+        title: "WanderLust",
+        description: "Built a full-stack room/hotel listing platform using Node.js, Express, MongoDB, EJS, and Bootstrap. Implemented secure authentication with Passport.js, REST APIs for listings and reviews, and a responsive UI. Booking and payment integration in progress.",
+        technologies: ["Node.js", "Express", "MongoDB", "Bootstrap", "EJS"],
+        link: "https://github.com/surajgupta9161/WanderLust"
+    },
+    {
+        title: "Portfolio Website",
+        description: "Developed a modern and responsive portfolio website using HTML, CSS, JavaScript, and React. Showcased projects, technical skills, and contact information using reusable React components and clean UI design. Focused on performance, responsiveness, and maintainable code structure.",
+        technologies: ["HTML", "CSS", "JavaScript", "React"],
+        link: "https://github.com/surajgupta9161/portfolio"
     },
     {
         title: "Quiz App",
@@ -13,21 +19,19 @@ const Data = [
 
     },
     {
+        title: "Weather App",
+        description: "A responsive Weather App built with React and Material- UI that fetches real - time weather data from WeatherAPI.Users can search for any city, view temperature, humidity and wind details, and local time, with proper error handling for invalid inputs.",
+        technologies: ["JavaScript", "HTML", "CSS", "React"],
+        link: "https://github.com/surajgupta9161/weatherApp"
+    },
+
+    {
         title: "Spotify Clone",
         description: "Designed a responsive Spotify-inspired music player interface using HTML and CSS. Replicated core UI components such as the sidebar, player controls, playlists, and navigation layout. Focused on clean design, responsiveness, and pixel-perfect styling.",
         technologies: ["HTML", "CSS"]
-    },
-    {
-        title: "Portfolio Website",
-        description: "Developed a modern and responsive portfolio website using HTML, CSS, JavaScript, and React. Showcased projects, technical skills, and contact information using reusable React components and clean UI design. Focused on performance, responsiveness, and maintainable code structure.",
-        technologies: ["HTML", "CSS", "JavaScript", "React"]
-    },
-    {
-        title: "Wanderlust",
-        description: "Built a full-stack room/hotel listing platform using Node.js, Express, MongoDB, EJS, and Bootstrap. Implemented secure authentication with Passport.js, REST APIs for listings and reviews, and a responsive UI. Booking and payment integration in progress.",
-        technologies: ["Node.js", "Express", "MongoDB", "Bootstrap", "EJS"],
-        link: "https://github.com/surajgupta9161/WanderLust"
     }
+
+
 ];
 
 export default Data;
