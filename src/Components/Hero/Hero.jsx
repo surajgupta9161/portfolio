@@ -1,6 +1,6 @@
 import React from 'react'
 import './Hero.css';
-import surajResume from "../../assets/SurajResumeDec.pdf"
+import surajResume from "../../assets/surajResumeDec.pdf"
 import suraj from "../../assets/suraj4.jpg"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
