@@ -26,7 +26,7 @@ const Navbar = () => {
                 <li>
                     <a
                         className='anchor'
-                        href='https://github.com/surajgupta9161/WanderLust'
+                        href='https://wanderlust-8kue.onrender.com/'
                         target="_blank"
                         rel="noopener noreferrer"
                     >
