@@ -1,5 +1,11 @@
 const Data = [
     {
+        title: "SearchMedia",
+        description: "SearchMedia is a React-based media search web app that lets users find photos, videos, and GIFs on a single platform. It integrates Unsplash, Pexels, and Tenor APIs to deliver high-quality media, uses Redux Toolkit for state management, and LocalStorage to save favorites—providing a fast, smooth, and user-friendly search experience",
+        technologies: ["React.Js", "Redux-toolkit"],
+        link: "https://github.com/surajgupta9161/SearchMedia",
+    },
+    {
         title: "WanderLust",
         description: "Built a full-stack room/hotel listing platform using Node.js, Express, MongoDB, EJS, and Bootstrap. Implemented secure authentication with Passport.js, REST APIs for listings and reviews, and a responsive UI. Booking and payment integration in progress.",
         technologies: ["Node.js", "Express", "MongoDB", "Bootstrap", "EJS"],
