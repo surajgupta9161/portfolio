@@ -1,7 +1,7 @@
 const Data = [
     {
         title: "SearchMedia",
-        description: "SearchMedia is a React-based media search web app that lets users find photos, videos, and GIFs on a single platform. It integrates Unsplash, Pexels, and Tenor APIs to deliver high-quality media, uses Redux Toolkit for state management, and LocalStorage to save favorites—providing a fast, smooth, and user-friendly search experience",
+        description: "SearchMedia is a React-based media search web app that lets users find photos, videos, and GIFs on a single platform. It integrates Unsplash, Pexels, and Tenor APIs to deliver high-quality media, uses Redux Toolkit for state management, and LocalStorage to save favorites—providing a fast, smooth, and user-friendly search experience and also use React-Router-Dom",
         technologies: ["React.Js", "Redux-toolkit"],
         link: "https://github.com/surajgupta9161/SearchMedia",
     },
