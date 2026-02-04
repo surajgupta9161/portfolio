@@ -60,6 +60,12 @@
     gap: 20px;
 }
 
+.contact-form button:active {
+    transform: translateY(4px) scale(0.97);
+    box-shadow: 0 2px 0 #0a2cff;
+}
+
+
 .contact-form label {
     font-size: 23px;
 }

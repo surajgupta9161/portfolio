@@ -55,6 +55,13 @@
     border-color: #fff;
 }
 
+.hero-connect:active {
+    transform: translateY(4px) scale(0.97);
+    box-shadow: 0 2px 0 #0a2cff;
+}
+
+
+
 .hero-resume {
     padding: 15px 40px;
     border-radius: 50px;
@@ -62,6 +69,11 @@
     cursor: pointer;
     text-decoration: none;
     color: #fff;
+}
+
+.hero-resume:active {
+    transform: translateY(4px) scale(0.97);
+    box-shadow: 0 2px 0 #0a2cff;
 }
 
 .hero-action div a {
