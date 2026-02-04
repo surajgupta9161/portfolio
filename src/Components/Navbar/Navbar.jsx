@@ -2,6 +2,9 @@ import React, { useRef } from 'react'
 import "./Navbar.css"
 import logo from "../../assets/logo.jpg"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { useGSAP } from '@gsap/react'
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 const Navbar = () => {
 
     const menuRef = useRef();
@@ -13,6 +16,22 @@ const Navbar = () => {
     const closeMenu = () => {
         menuRef.current.style.right = "-350px";
     }
+
+    // gsap.registerPlugin(ScrollTrigger);
+
+    // useGSAP(() => {
+    //     gsap.from(".navbar", {
+    //         y: -120,
+    //         // top: 100,
+    //         opacity: 0,
+    //         duration: 1,
+    //         scrollTrigger: {
+    //             trigger: ".navbar",
+    //             start: "top 80%",   // 👈 jab navbar viewport me aaye
+    //             toggleActions: "play none none none",
+    //         },
+    //     })
+    // })
 
     return (
         <div className='navbar'>

@@ -2,6 +2,11 @@ import React from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import "./Contact.css"
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
 const Contact = () => {
     const [result, setResult] = React.useState("");
     const onSubmit = async (event) => {
@@ -29,8 +34,51 @@ const Contact = () => {
         }
     };
 
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const contactRef = useRef(null);
+
+    useGSAP(
+        () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: contactRef.current,
+                    start: "top 80%",
+                    toggleActions: "play reset play reset",
+                },
+            });
+
+            tl.from(".contact-title h1", {
+                y: 50,
+                opacity: 0,
+                duration: 0.6,
+            })
+                .from(
+                    ".contact-left",
+                    {
+                        x: -100,
+                        opacity: 0,
+                        duration: 0.7,
+                    },
+                    "-=0.3"
+                )
+                .from(
+                    ".contact-form",
+                    {
+                        x: 100,
+                        opacity: 0,
+                        duration: 1,
+                    },
+                    "-=0.5"
+                );
+        },
+        { scope: contactRef }
+    );
+
     return (
-        <div id='contact' className='contact'>
+        <div id='contact' ref={contactRef} className='contact'>
             <div className="contact-title">
                 <h1>Get In Touch</h1>
             </div>

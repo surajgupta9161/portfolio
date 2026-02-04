@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
             </div>
             <hr className='line' />
-            <p><i className="fa-solid fa-copyright"></i>2025 Suraj Gupta. All rights reserved.</p>
+            <p><i className="fa-solid fa-copyright"></i>2026 Suraj Gupta. All rights reserved.</p>
             <br />
         </div>
     )

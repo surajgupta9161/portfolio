@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./Card.css";
 import Data from "../../Data/Data.js";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function ProjectCard({ project }) {
     const [light, setLight] = useState({ x: "50%", y: "50%", opacity: 0 });
@@ -67,7 +70,33 @@ function ProjectCard({ project }) {
     );
 }
 
+
+
+
 export default function Card() {
+    // gsap.registerPlugin(ScrollTrigger);
+
+
+    // useGSAP(() => {
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: ".cards-container",
+    //             start: "top 85%",
+    //             toggleActions: "play none none reverse",
+    //             markers: true, // testing ke liye (baad me hata dena)
+    //         },
+    //     });
+
+    //     tl.from(".project-card", {
+    //         y: 60,
+    //         opacity: 0,
+    //         duration: 0.6,
+    //         stagger: 0.2,
+    //         ease: "power3.out",
+    //     });
+
+    // }, { scope: ".cards-container" });
+
     return (
         <div className="cards-container">
             {Data.map((project, ind) => (

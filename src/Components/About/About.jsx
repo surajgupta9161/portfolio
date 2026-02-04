@@ -1,10 +1,82 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import "./About.css";
 import suraj from "../../assets/suraj.jpg"
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
 const About = () => {
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const aboutRef = useRef(null)
+
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: aboutRef.current,
+                start: "top 80%",
+                toggleActions: "play reset play reset",
+
+            },
+        });
+
+        tl.from(".about-title h1", { y: 60, opacity: 0, duration: 0.4 })
+            .from(".about-left img", { x: -80, opacity: 0, duration: 0.4 })
+            .from(".about-para p", { y: 40, opacity: 0, duration: 0.5 })
+            .from(".about-skills", { x: 50, opacity: 0, stagger: 0.6 })
+            .from(".achivements", { y: 50, opacity: 0, stagger: 0.6 });
+
+        ScrollTrigger.refresh();
+    }, { scope: "#about" });
+
+
+    // useGSAP(() => {
+    //     const tl = gsap.timeline({ paused: true });
+
+    //     tl.from(".about-title h1", {
+    //         y: 60,
+    //         opacity: 0,
+    //         duration: 0.6,
+    //         ease: "power3.out",
+    //     })
+    //         .from(".about-left img", {
+    //             x: -80,
+    //             opacity: 0,
+    //             duration: 0.6,
+    //         })
+    //         .from(".about-para p", {
+    //             y: 40,
+    //             opacity: 0,
+    //             duration: 0.5,
+    //         })
+    //         .from(".about-skills", {
+    //             x: 50,
+    //             opacity: 0,
+    //             stagger: 0.2,
+    //         })
+    //         .from(".achivements", {
+    //             y: 50,
+    //             opacity: 0,
+    //             stagger: 0.3,
+    //         });
+
+    //     ScrollTrigger.create({
+    //         trigger: ".about-title",
+    //         start: "top 85%",
+    //         onEnter: () => tl.play(),
+    //         onLeaveBack: () => tl.reverse(),
+    //         // markers: true, // debug ke baad hata dena
+    //     });
+
+    // }, { scope: "#about" });
+
+
     return (
         <div>
-            <div id='about' className="about">
+            <div id='about' ref={aboutRef} className="about">
                 <div className="about-title">
                     <h1>About Me</h1>
                 </div>
