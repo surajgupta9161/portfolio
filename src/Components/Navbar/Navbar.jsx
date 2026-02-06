@@ -8,12 +8,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const Navbar = () => {
 
     const menuRef = useRef();
+    const mobOpenRef = useRef();
 
     const openMenu = () => {
         menuRef.current.style.right = "0";
+        mobOpenRef.current.style.display = "none";
+
     }
 
     const closeMenu = () => {
+        mobOpenRef.current.style.display = "block";
         menuRef.current.style.right = "-350px";
     }
 
@@ -36,7 +40,7 @@ const Navbar = () => {
     return (
         <div className='navbar'>
             <img src={logo} alt="logo" />
-            <i className="fa-solid fa-bars nav-mob-open" onClick={openMenu} ></i>
+            <i ref={mobOpenRef} className="fa-solid fa-bars nav-mob-open" onClick={openMenu} ></i>
             <ul ref={menuRef} className="nav-menu">
                 <i className="fa-solid fa-xmark nav-mob-close" onClick={closeMenu}></i>
                 <li> <AnchorLink className='anchor' href='#hero'><p>Home</p></AnchorLink></li>

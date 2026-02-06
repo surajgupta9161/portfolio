@@ -1,3 +1,4 @@
+import { useState } from "react"
 import About from "./Components/About/About"
 import Contact from "./Components/Contact/Contact"
 import Footer from "./Components/Footer/Footer"
@@ -8,6 +9,7 @@ import Card from "./Components/Projects/Card"
 
 
 function App() {
+
 
   return (
     <>
