@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import "./Contact.css"
@@ -9,10 +9,24 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Contact = () => {
     const [result, setResult] = React.useState("");
+    const [emailError, setEmailError] = React.useState("");
+    const [submiting, setSubmiting] = useState(false)
+
+    const validateEmail = (value) => {
+        const regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        return regex.test(value);
+    };
+
     const onSubmit = async (event) => {
         event.preventDefault();
+        setSubmiting(true)
         setResult("Sending....");
         const formData = new FormData(event.target);
+        if (!validateEmail(formData.get("email"))) {
+            alert("Invalid email address");
+            setSubmiting(false)
+            return;
+        }
 
         formData.append("access_key", "fb42eb7f-7058-4ef7-9c6a-8b03b5699a7c");
 
@@ -27,10 +41,12 @@ const Contact = () => {
             setResult("Form Submitted Successfully");
             event.target.reset();
             alert("Done! We got your details. We'll reach out soon!");
+            setSubmiting(false)
         } else {
             console.log("Error", data);
             setResult(data.message);
             alert("Something went wrong, please try again.");
+            setSubmiting(false)
         }
     };
 
@@ -100,15 +116,21 @@ const Contact = () => {
                     </div>
                 </div>
                 <form onSubmit={onSubmit} className='contact-form'>
-                    <label htmlFor="YourName">Your Name:</label>
-                    {/* <TextField id="outlined-basic" label="Your Name" variant="outlined" /> */}
-                    <input type="text" name='name' id='YourName' placeholder='Enter Your Name' required />
+                    <label htmlFor="YourName" >Your Name:</label>
+                    <input type="text" name='name' id='YourName' minlength="3" pattern="[A-Za-z\s]+" placeholder='Enter Your Name' title="Number not allowed. Only text allowed (min 3 characters)" required />
                     <label htmlFor="email">Your E-mail:</label>
-                    {/* <TextField id="outlined-basic" label="Your E-mail" variant="outlined" /> */}
-                    <input type="email" name='email' id='email' placeholder='Enter Your E-mail' required />
+                    <input type="text" name='email' id='email' placeholder='Enter Your E-mail' required onChange={(e) => {
+                        const value = e.target.value;
+                        if (!validateEmail(value)) {
+                            setEmailError("Invalid email format");
+                        } else {
+                            setEmailError("");
+                        }
+                    }} />
+                    {emailError && <p style={{ color: "red", fontSize: "15px" }}>{emailError}</p>}
                     <label htmlFor="message">Write your message here:</label>
-                    <textarea rows={3} name='message' id='message' placeholder='write here' required></textarea>
-                    <button type='submit' >Submit Now</button>
+                    <textarea rows={3} name='message' id='message' minlength="4" placeholder='write here' title="Minimum 4 characters required" required></textarea>
+                    <button type='submit' disabled={submiting} >{`${submiting ? "Submiting..." : "Submit"}`}</button>
                 </form>
             </div>
         </div>
