@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import './Hero.css';
-import surajResume from "../../assets/surajResumeDec.pdf"
+import surajResume from "../../assets/surajResumeFeb.pdf"
 import suraj from "../../assets/suraj4.jpg"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { useGSAP } from '@gsap/react';
