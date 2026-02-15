@@ -1,107 +1,115 @@
-import React, { useState } from "react";
-import "./Card.css";
-import Data from "../../Data/Data.js";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useState } from 'react'
+import './Card.css'
+import Data from '../../Data/Data.js'
 
-function ProjectCard({ project }) {
-    const [light, setLight] = useState({ x: "50%", y: "50%", opacity: 0 });
-    const [tilt, setTilt] = useState({ x: 0, y: 0 });
+function ProjectCard ({ project }) {
+  const [light, setLight] = useState({ x: '50%', y: '50%', opacity: 0 })
+  const [tilt, setTilt] = useState({ x: 0, y: 0 })
 
-    const handleMouseMove = (e) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        const x = e.nativeEvent.offsetX; // card ke andar ka X
-        const y = e.nativeEvent.offsetY; // card ke andar ka Y
+  const handleMouseMove = e => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = e.nativeEvent.offsetX // card ke andar ka X
+    const y = e.nativeEvent.offsetY // card ke andar ka Y
 
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
+    const centerX = rect.width / 2
+    const centerY = rect.height / 2
 
-        const rotateX = ((y - centerY) / centerY) * 3;
-        const rotateY = ((x - centerX) / centerX) * -3;
+    const rotateX = ((y - centerY) / centerY) * 3
+    const rotateY = ((x - centerX) / centerX) * -3
 
-        setTilt({ x: rotateX, y: rotateY });
-        setLight({ x: x + "px", y: y + "px", opacity: 0.6 });
-    };
+    setTilt({ x: rotateX, y: rotateY })
+    setLight({ x: x + 'px', y: y + 'px', opacity: 0.6 })
+  }
 
-    const handleMouseLeave = () => {
-        setTilt({ x: 0, y: 0 });
-        setLight({ ...light, opacity: 0 });
-    };
+  const handleMouseLeave = () => {
+    setTilt({ x: 0, y: 0 })
+    setLight({ ...light, opacity: 0 })
+  }
 
-    return (
-        <div
-            className="scene card-box"
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-        >
+  return (
+    <div
+      className='scene card-box'
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div
+        className='card'
+        style={{
+          transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
+          '--light-x': light.x,
+          '--light-y': light.y,
+          '--light-opacity': light.opacity
+        }}
+      >
+        <div className='card-inner'>
+          <h3 className='title'>{project.title}</h3>
+          <p className='desc'>{project.description}</p>
+
+          <div className='meta'>
+            {project.technologies.map((tech, i) => (
+              <div key={i} className='chip'>
+                {tech}
+              </div>
+            ))}
             <div
-                className="card"
-                style={{
-                    transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
-                    "--light-x": light.x,
-                    "--light-y": light.y,
-                    "--light-opacity": light.opacity,
-                }}
+              style={{
+                marginLeft: 'auto',
+                fontSize: '15px',
+                color: '#777'
+              }}
             >
-                <div className="card-inner">
-                    <h3 className="title">{project.title}</h3>
-                    <p className="desc">{project.description}</p>
+              {project?.link?.length > 0 && (
+                <a href={project.link} target='_blank' className='getcode'>
+                  GetCode
+                </a>
+              )}
 
-                    <div className="meta">
-                        {project.technologies.map((tech, i) => (
-                            <div key={i} className="chip">
-                                {tech}
-                            </div>
-                        ))}
-                        <div
-                            style={{
-                                marginLeft: "auto",
-                                fontSize: "15px",
-                                color: "#777",
-                            }}
-                        >
-                            <a href={project.link} target="_blank" className="getcode">GetCode</a>
-                        </div>
-                    </div>
-                </div>
+              {project?.live?.length > 0 && (
+                <a
+                  style={{ marginLeft: '15px' }}
+                  href={project.live}
+                  target='_blank'
+                  className='getcode'
+                >
+                  Live
+                </a>
+              )}
             </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  )
 }
 
+export default function Card () {
+  // gsap.registerPlugin(ScrollTrigger);
 
+  // useGSAP(() => {
+  //     const tl = gsap.timeline({
+  //         scrollTrigger: {
+  //             trigger: ".cards-container",
+  //             start: "top 85%",
+  //             toggleActions: "play none none reverse",
+  //             markers: true, // testing ke liye (baad me hata dena)
+  //         },
+  //     });
 
+  //     tl.from(".project-card", {
+  //         y: 60,
+  //         opacity: 0,
+  //         duration: 0.6,
+  //         stagger: 0.2,
+  //         ease: "power3.out",
+  //     });
 
-export default function Card() {
-    // gsap.registerPlugin(ScrollTrigger);
+  // }, { scope: ".cards-container" });
 
-
-    // useGSAP(() => {
-    //     const tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: ".cards-container",
-    //             start: "top 85%",
-    //             toggleActions: "play none none reverse",
-    //             markers: true, // testing ke liye (baad me hata dena)
-    //         },
-    //     });
-
-    //     tl.from(".project-card", {
-    //         y: 60,
-    //         opacity: 0,
-    //         duration: 0.6,
-    //         stagger: 0.2,
-    //         ease: "power3.out",
-    //     });
-
-    // }, { scope: ".cards-container" });
-
-    return (
-        <div className="cards-container">
-            {Data.map((project, ind) => (
-                <ProjectCard key={ind} project={project} />
-            ))}
-        </div>
-    );
+  return (
+    <div className='cards-container'>
+      {Data.map((project, ind) => (
+        <ProjectCard key={ind} project={project} />
+      ))}
+    </div>
+  )
 }
