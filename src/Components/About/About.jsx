@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import './About.css'
-import suraj from '../../assets/suraj.jpg'
+import suraj from '../../assets/image-pro.png'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
