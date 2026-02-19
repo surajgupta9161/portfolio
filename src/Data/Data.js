@@ -31,7 +31,7 @@ const Data = [
     live: 'https://wanderlust-8kue.onrender.com'
   },
   {
-    title: 'Portfolio Website',
+    title: 'Personal Portfolio',
     description:
       'Developed a modern and responsive portfolio website using HTML, CSS, JavaScript, and React. Showcased projects, technical skills, and contact information using reusable React components and clean UI design. Focused on performance, responsiveness, and maintainable code structure.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
