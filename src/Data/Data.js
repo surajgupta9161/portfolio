@@ -1,6 +1,6 @@
 const Data = [
   {
-    title: 'MusicHub =>',
+    title: 'MusicHub:=>',
     description:
       'MusicHub is a MERN-based role-based music and video sharing platform where users and artists can securely upload, manage, and stream media content. It features a modern React + Tailwind UI, JWT authentication with HTTP-only cookies, protected routes, and media handling via ImageKit—built on a scalable Express and Node.js API.',
     technologies: [
