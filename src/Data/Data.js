@@ -23,7 +23,7 @@ const Data = [
     live: 'https://search-media-qdpl.vercel.app/'
   },
   {
-    title: 'WanderLust =>',
+    title: 'WanderLust',
     description:
       'Built a full-stack room/hotel listing platform using Node.js, Express, MongoDB, EJS, and Bootstrap. Implemented secure authentication with Passport.js, REST APIs for listings and reviews, and a responsive UI.',
     technologies: ['Node.js', 'Express', 'MongoDB', 'Bootstrap', 'EJS'],
