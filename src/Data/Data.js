@@ -38,7 +38,7 @@ const Data = [
     link: 'https://github.com/surajgupta9161/portfolio'
   },
   {
-    title: 'Quiz App =>',
+    title: 'Quiz App',
     description:
       'A responsive Quiz App built with React that presents multiple-choice questions. Users get instant feedback on their answers, with correct options highlighted and wrong ones in red, while tracking their score and allowing quiz reset.',
     technologies: ['JavaScript', 'React', 'HTML/CSS'],
