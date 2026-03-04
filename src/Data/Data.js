@@ -45,7 +45,7 @@ const Data = [
     link: 'https://github.com/surajgupta9161/QuizeApp'
   },
   {
-    title: 'Weather App =>',
+    title: 'Weather App',
     description:
       'A responsive Weather App built with React and Material- UI that fetches real - time weather data from WeatherAPI.Users can search for any city, view temperature, humidity and wind details, and local time, with proper error handling for invalid inputs.',
     technologies: ['JavaScript', 'HTML', 'CSS', 'React'],
