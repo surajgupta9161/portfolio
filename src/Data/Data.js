@@ -1,6 +1,6 @@
 const Data = [
   {
-    title: 'MusicHub',
+    title: 'MusicHub*',
     description:
       'MusicHub is a MERN-based role-based music and video sharing platform where users and artists can securely upload, manage, and stream media content. It features a modern React + Tailwind UI, JWT authentication with HTTP-only cookies, protected routes, and media handling via ImageKit—built on a scalable Express and Node.js API.',
     technologies: [
@@ -38,7 +38,7 @@ const Data = [
     live: 'https://wanderlust-8kue.onrender.com'
   },
   {
-    title: 'Personal Portfolio',
+    title: 'Personal Portfolio*',
     description:
       'Developed a modern and responsive portfolio website using HTML, CSS, JavaScript, and React. Showcased projects, technical skills, and contact information using reusable React components and clean UI design. Focused on performance, responsiveness, and maintainable code structure.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
