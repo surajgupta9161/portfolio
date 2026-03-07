@@ -13,6 +13,13 @@ const Data = [
     link: 'https://github.com/surajgupta9161/MusicHub',
     live: 'https://musichub-2.onrender.com/'
   },
+  {
+    title: 'RaSuAI',
+    description:
+      'Developed a full-stack AI voice assistant using the MERN stack and Gemini API with secure user authentication. Enabled users to customize the AI name and profile image, and built a responsive UI for smooth voice-based interactions.',
+    technologies: ['MERN Stack', 'Tailwind CSS', 'React Router'],
+    link: 'https://github.com/surajgupta9161/RaSuAI'
+  },
 
   {
     title: 'SearchMedia',
