@@ -1,5 +1,12 @@
 const Data = [
   {
+    title: 'Bank Management System*',
+    description:
+      'Bank Management System is a backend API built with Node.js, Express.js, and MongoDB for managing bank accounts, transactions, deposits, withdrawals, and customer data.',
+    technologies: ['Node.JS', 'Express', 'Mongodb', 'JWT'],
+    link: 'https://github.com/surajgupta9161/RaSuAI'
+  },
+  {
     title: 'MusicHub*',
     description:
       'MusicHub is a MERN-based role-based music and video sharing platform where users and artists can securely upload, manage, and stream media content. It features a modern React + Tailwind UI, JWT authentication with HTTP-only cookies, protected routes, and media handling via ImageKit—built on a scalable Express and Node.js API.',
