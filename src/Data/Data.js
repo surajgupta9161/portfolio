@@ -4,7 +4,7 @@ const Data = [
     description:
       'Bank Management System is a backend API built with Node.js, Express.js, and MongoDB for managing bank accounts, transactions, deposits, withdrawals, and customer data.',
     technologies: ['Node.JS', 'Express', 'Mongodb', 'JWT'],
-    link: 'https://github.com/surajgupta9161/RaSuAI'
+    link: 'https://github.com/surajgupta9161/Bank-Management'
   },
   {
     title: 'MusicHub*',
