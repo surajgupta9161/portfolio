@@ -81,17 +81,17 @@ const About = () => {
         </div>
         <div className='achivements'>
           <div className='achivement'>
-            <h1>05+</h1>
+            <h1>08+</h1>
             <p>PROJECTS COMPLETED</p>
           </div>
           <hr />
           <div className='achivement'>
-            <h1>02+</h1>
+            <h1>04+</h1>
             <p>PROJECTS PENDING</p>
           </div>
           <hr />
           <div className='achivement'>
-            <h1>03+</h1>
+            <h1>05+</h1>
             <p>PROJECTS IDEAS!</p>
           </div>
         </div>
