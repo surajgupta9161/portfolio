@@ -1,6 +1,6 @@
 const Data = [
   {
-    title: 'Bank Management System*',
+    title: 'Bank Management System',
     description:
       'Bank Management System is a backend API built with Node.js, Express.js, and MongoDB for managing bank accounts, transactions, deposits, withdrawals, and customer data.',
     technologies: ['Node.JS', 'Express', 'Mongodb', 'JWT'],
